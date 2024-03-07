@@ -17,6 +17,7 @@ function Menu(){
         <Nav className="me-auto">
           <Nav.Link href="#features">Contact</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link as={Link} href="/client/pageAide"><HelpIcon />Aide</Nav.Link>
         </Nav>
         <div className="ms-auto">
       <Button variant="warning" style={{marginRight: '5px'}} id='buttons'>Login</Button>
