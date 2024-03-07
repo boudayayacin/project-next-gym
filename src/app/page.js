@@ -1,11 +1,11 @@
 import { dividerClasses } from "@mui/material";
 import Image from "next/image";
 import Menu from "@/components/client/menu";
-import ControlledCarousel from "@/components/client/ImageHome"
+import MainGridHome from "@/components/homepage";
 export default function Home() {
   return (
  <>
- < ControlledCarousel />
+ <MainGridHome />
  </>
   );
 }

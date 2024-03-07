@@ -7,18 +7,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HelpIcon from '@mui/icons-material/Help';
-
+import Button from 'react-bootstrap/Button';
 function Menu(){
   
     return(
-        <Navbar bg="dark" data-bs-theme="dark" className="custom-navbar">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-          <Nav.Link as={Link} href="/"><HomeIcon/>Home</Nav.Link>  
-          <Nav.Link as={Link} href="/"><AccountCircleIcon/>Se connecter</Nav.Link>          </Nav>
-          <Nav.Link as={Link} href="/"><HelpIcon/>Aide</Nav.Link>        </Container>
-      </Navbar> 
+      <Navbar bg="dark" data-bs-theme="dark">
+      <Container>
+        <Navbar.Brand href="#home">B-GYM</Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="#features">Contact</Nav.Link>
+          <Nav.Link href="#pricing">Pricing</Nav.Link>
+        </Nav>
+        <div className="ms-auto">
+      <Button variant="warning" style={{marginRight: '5px'}} id='buttons'>Login</Button>
+      <Button variant="warning" id='buttons'>Sign Up</Button>
+    </div>
+      </Container>
+    </Navbar>
     );
 }
 export default Menu ;

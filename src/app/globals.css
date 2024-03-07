@@ -13,6 +13,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --color-one : rgb(187, 167, 18);
   }
 }
 
@@ -24,11 +25,110 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    background-image: url('../../images/young-fitness-man-studio.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
 }
 
+#buttons{
+  border: 2px solid var(--color-one);
+  background-color: rgb(54, 53, 53);
+  color: var(--color-one);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#buttons:hover{
+background-color: var(--color-one);
+color: rgb(54, 53, 53);
+font-weight: bold;
+  font-size: 17px;
+  border: 2px solid rgb(54, 53, 53);
+}
+.section1 h1 {
+color: white;
+font-size: 45px;
+font-weight: bold;
+color: var(--color-one);
+}
+.section1 h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--color-one);
+}
+.section1 p {
+  font-size: 18px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.section1 {
+  width: 600px;
+  margin: 70px;
+}
+.section2{
+  margin-top: 40px;
+  background-color: #101b20;
+  text-align: center;
+  margin-top: 300px;
+}
+.section2 h1{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  font-family: sans-serif;
+}
+#card {
+  background-color: #2d303f;
+}
+.custom-text{
+  font-size: 20px;
+  text-align: left;
+  color: white;
+}
+.custom-title{
+  font-weight: bold;
+  color: white;
+}
+.text{
+  color: whitesmoke;
+  text-align: left;
+}
+.section2 .text-h1{
+  color: var(--color-one);
+  font-size: 40px;
+}
+.section2 .texting{
+  font-weight: bold;
+  color: white;
+}
+#number{
+  color: var(--color-one);
+  font-weight: bold;
+  font-size: 20px;
+}
+#card-global{
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0px auto;
+  gap: 20px;
+  justify-content: space-around;
+}
+.card-glo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% ;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
 
