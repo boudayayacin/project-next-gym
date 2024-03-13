@@ -5,62 +5,33 @@ import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 const Footer = () => {
 return (
-    <div >
-<section className='section2 py-8'>
-      <h1 className='text-h1'>WHY CHOOSE US</h1>
-        <p className='texting'>
-          Nous sommes fiers de vous offrir une expérience unique qui vous
-          permettra de profiter pleinement de votre temps et de vos ressources.
-          <br></br>
-          Notre plateforme vous permet de :
-        </p>
-        <div className="card-glo">
-        <div id='card-global'>
-        <Card style={{ width: '400px'}} id='card' className="custom-card">
-      <Card.Body>
-        <Card.Title id='number'>01</Card.Title>
-        <Card.Text className='custom-text'>
-        Acheter des produits de qualité
-        </Card.Text>
-        <Card.Text className='text'>
-        Vous pouvez parcourir les différentes catégories, comparer les prix et effectuer vos achats en toute confiance
-        </Card.Text>
-      </Card.Body>
-    </Card>
-        <Card style={{ width: '400px'}} id='card'>
-      <Card.Body>
-        <Card.Title id='number'>02</Card.Title>
-        <Card.Text  className='custom-text'>
-        Accéder à des cours et exercices en ligne
-        </Card.Text>
-        <Card.Text className='text'>
-        Améliorez vos compétences et développez de nouvelles passions grâce à notre plateforme        </Card.Text>
-      </Card.Body>
-    </Card>
-        <Card style={{ width: '400px'}} id='card'>
-      <Card.Body>
-        <Card.Title id='number'>03</Card.Title>
-        <Card.Text  className='custom-text'>
-        Trouver des services locaux
-        </Card.Text>
-        <Card.Text className='text'>
-        Simplifiez votre recherche de services locaux en utilisant notre plateforme        </Card.Text>
-      </Card.Body>
-    </Card>
-        <Card style={{ width: '400px'}} id='card'>
-      <Card.Body>
-        <Card.Title id='number'>04</Card.Title>
-        <Card.Text  className='custom-text'>
-        Réserver des activités de loisirs
-        </Card.Text>
-        <Card.Text className='text'>
-        Découvrez une multitude d'activités de loisirs passionnantes à travers notre plateforme        </Card.Text>
-      </Card.Body>
-    </Card>
-    </div>
+    <div className='footer' >
+      <div className="bloc1">
+    <h3>INFORMATION </h3>
+      <ul className='first-ul'>
+        <li>A propos</li>
+        <li>Réclamation</li>
+        <li>FAQ</li>
+        <li>Condition de vente-Adultes</li>
+      </ul>
       </div>
-      </section>
+      <div className="bloc2">
+    <h3>Liens Utiles </h3>
+      <ul className='sec-ul'>
+        <li>Activité</li>
+        <li>Blog</li>
+        <li>Offres</li>
+      </ul>
       </div>
+      <div className="bloc3">
+    <h3>suivez nous  </h3>
+      <ul className='th-ul'>
+       <li><a href=""><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhPJwq8o9CuxYwaq_lAzai5q2GNOFY_A42JiU8UkPqaw&s'></img></a></li> 
+       <li><a href=""><img src='https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg'></img></a></li> 
+       <li><a href=""><img src='https://img.freepik.com/free-vector/youtube-player-icon-with-flat-design_23-2147837753.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1710201600&semt=sph'></img></a></li> 
+      </ul>
+      </div>
+  </div>
 )
 }
 export default Footer
