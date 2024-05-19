@@ -20,12 +20,14 @@ function Menu(){
           <Nav.Link href="#features">Contact</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
           <Nav.Link as={Link} href="/client/pageAide"><HelpIcon />Aide</Nav.Link>
-           
-        {session? <Nav.Link onClick={() => signOut()}><LogoutIcon/>Se
-déconnecter</Nav.Link>
-: <Nav.Link onClick={() => signIn()}><AccountCircleIcon/>Se
-connecter</Nav.Link>
+        <div className="ms-auto">
+        
+        {session? <Nav.Link className='btnnav' onClick={() => signOut()}><LogoutIcon/><Button  variant="warning" style={{marginRight: '5px'}} id='buttons'>logout </Button>
+        </Nav.Link>
+: <Nav.Link onClick={() => signIn()}><AccountCircleIcon/><Button variant="warning" style={{marginRight: '5px'}} id='buttons'>login</Button></Nav.Link>
 }
+      {/* <Button variant="warning" style={{marginRight: '5px'}} id='buttons'>Login</Button> */}
+    </div>
         </Nav>
       </Container>
     </Navbar>
