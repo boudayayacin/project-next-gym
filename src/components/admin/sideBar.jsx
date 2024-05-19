@@ -11,6 +11,8 @@ import ReceiptIcon from '@mui/icons-material/Receipt';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import Image from 'next/image'
+import { useSession } from 'next-auth/react'
 const SideBar = () => {
 return (
 <Sidebar>
@@ -30,6 +32,27 @@ backgroundColor: active ? '#4f5d73' : '#071121',
 <div className="card" style={{"backgroundColor": "#44ebe2"}}>
 <div className="card-body">
 <AdminPanelSettingsIcon /> Administrateur
+</div>
+</div>
+</MenuItem>
+<MenuItem>
+<div className="card" style={{"backgroundColor": "#44ebe2"}}>
+<div className="card-body">
+{session?.user?.image ? (
+<div>
+<Image
+src={session.user.image}
+alt={session.user.email}
+className='inline-block rounded-full'
+width={30}
+height={30}
+style={{ width: 'auto', height: 'auto' }}
+/>
+{session.user.email}
+</div>
+) : (
+null
+)}
 </div>
 </div>
 </MenuItem>
