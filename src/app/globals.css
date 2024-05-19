@@ -25,13 +25,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background-image: url('../../images/young-fitness-man-studio.jpg');
+  background-image: url('../../images/young-fitness-man-studio.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
   width: 100%;
 }
-
 #buttons{
   border: 2px solid var(--color-one);
   background-color: rgb(54, 53, 53);
@@ -39,7 +38,6 @@ body {
   font-weight: bold;
   font-size: 17px;
 }
-
 #buttons:hover{
 background-color: var(--color-one);
 color: rgb(54, 53, 53);
@@ -74,6 +72,9 @@ color: var(--color-one);
   background-color: #101b20;
   text-align: center;
   margin-top: 300px;
+  /* background-image: url('../../images/girl-fit-2.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .section2 h1{
   font-weight: bold;

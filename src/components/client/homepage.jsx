@@ -18,7 +18,9 @@ const MainGridHome = () => {
           always easy.
         </p>
         <Button variant='danger'>Get Started</Button>
+        
       </section>
+      
       <section className='section2 py-8'>
             <h1 className='text-h1'>WHY CHOOSE US</h1>
               <p className='texting'>
