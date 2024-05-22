@@ -12,8 +12,9 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Image from 'next/image'
-import { useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react';
 const SideBar = () => {
+const { data: session } = useSession;
 return (
 <Sidebar>
 <Menu

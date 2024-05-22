@@ -171,6 +171,9 @@ text-align: left;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.btnnav{
+  margin-left: 200px;
+}
 .soustitle{
   color: var(--color-one);
 }
