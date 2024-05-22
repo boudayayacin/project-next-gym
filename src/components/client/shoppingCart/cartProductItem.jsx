@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
@@ -25,53 +25,40 @@ const CartProductItem = ({ product }) => {
       image: product.imageart,
       price: product.prix
     };
-    addItem(target, { count: quantity })
-      .then(() => {
-        console.log('Item added to cart:', target);
-        setQuantity(1);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    addItem(target, { count: quantity }).then(() => {
+      console.log('Item added to cart:', target);
+      setQuantity(1);
+    }).catch((err) => {
+      console.log(err);
+    });
   };
 
   return (
-    <article className="col-sm-3 mt-5">
-      <div className="card">
+    <div className="col-md-3 mb-4">
+      <div className="card h-100">
         <img
           src={product?.imageart}
-          className="card-img-top p-5"
-          alt={product.designation}
+          className="card-img-top p-3"
+          alt={product?.designation || "Product image"}
+          style={{ height: '400px', width: '400px' , objectFit: 'cover' }}
         />
-      </div>
-      <div className="text-center">
-        <div>{product.designation.substr(0, 20)} ...</div>
-        <div>Prix: {product.prix} TND</div>
-        <div className="flex flex-col items-center justify-center">
-          <div className="flex">
+        <div className="card-body text-center">
+          <h2 className="card-title">{product?.designation ? `${product.designation.substr(0, 20)} ...` : "No designation"} </h2>
+          <p className="card-text">Prix: {product?.prix ? `${product.prix} TND` : "Price not available"}</p>
+          <div className="d-flex justify-content-center mb-2">
             <Rating style={{ maxWidth: 100 }} value={5} />
           </div>
+          <div className="d-flex justify-content-center mb-2">
+            <button className="btn btn-secondary me-2" onClick={decreaseQuantity}>-</button>
+            <span className="mx-2">{quantity}</span>
+            <button className="btn btn-secondary ms-2" onClick={increaseQuantity}>+</button>
+          </div>
+          <button className="btn btn-warning" disabled={product.qtestock <= 1} onClick={() => addToCart(product)}>
+            Add to cart
+          </button>
         </div>
       </div>
-      <div className="text-center">
-        <button className="mr-5" onClick={decreaseQuantity}>
-          -
-        </button>
-        <span>{quantity}</span>
-        <button className="ml-5" onClick={increaseQuantity}>
-          +
-        </button>
-      </div>
-      <div className="text-center">
-        <button
-          className="btn btn-warning"
-          disabled={product.qtestock <= 1}
-          onClick={() => addToCart(product)}
-        >
-          Add to cart
-        </button>
-      </div>
-    </article>
+    </div>
   );
 };
 

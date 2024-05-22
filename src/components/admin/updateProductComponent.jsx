@@ -108,13 +108,13 @@ abort();
 return (
 <div>
 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-<h2>Modification Produit</h2>
+<h2 className='titleajout'>Modification Produit</h2>
 <div className="container w-100 d-flex justify-content-center">
 <div>
 <div className='form mt-3'>
 <Row className="mb-2">
 <Form.Group as={Col} md="6" >
-<Form.Label >Référence *</Form.Label>
+<Form.Label className='soustitle'>Référence *</Form.Label>
 <Form.Control
 required
 type="text"
@@ -127,7 +127,7 @@ Saisir Référence Article
 </Form.Control.Feedback>
 </Form.Group>
 <Form.Group as={Col} md="6">
-<Form.Label>Désignation *</Form.Label>
+<Form.Label className='soustitle'>Désignation *</Form.Label>
 <Form.Control
 required
 type="text"
@@ -135,14 +135,14 @@ placeholder="Désignation"
 value={designation}
 onChange={(e)=>setDesignation(e.target.value)}
 />
-<Form.Control.Feedback type="invalid">
+<Form.Control.Feedback type="invalid" >
 Saisir Désignation
 </Form.Control.Feedback>
 </Form.Group>
 </Row>
 <Row className="mb-2">
 <Form.Group className="col-md-6">
-<Form.Label>Marque *</Form.Label>
+<Form.Label className='soustitle'>Marque *</Form.Label>
 <InputGroup hasValidation>
 <Form.Control
 type="text"
@@ -157,7 +157,7 @@ Marque Incorrecte
 </InputGroup>
 </Form.Group>
 <Form.Group as={Col} md="6">
-<Form.Label>Prix</Form.Label>
+<Form.Label className='soustitle'>Prix</Form.Label>
 <Form.Control
 type="number"
 placeholder="Prix"
@@ -168,7 +168,7 @@ onChange={(e)=>setPrix(e.target.value)}
 </Row>
 <Row className="mb-3">
 <Form.Group className="col-md-6 ">
-<Form.Label>
+<Form.Label className='soustitle'>
 Qté stock<span className="req-tag">*</span>
 </Form.Label>
 <Form.Control
@@ -196,7 +196,7 @@ name="file"
 </div>
 </Form.Group>
 <Form.Group as={Col} md="12">
-<Form.Label>S/Catégorie</Form.Label>
+<Form.Label className='soustitle'>S/Catégorie</Form.Label>
 <Form.Control
 as="select"
 type="select"
@@ -212,7 +212,7 @@ value={scat._id}>{scat.nomscategorie}</option>)}
 </div>
 </div>
 </div>
-<Button type="submit">Valider</Button>
+<Button type="submit" id='btn1'>Valider</Button>
 </Form>
 </div>
 )

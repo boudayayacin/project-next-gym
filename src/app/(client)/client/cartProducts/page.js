@@ -6,7 +6,8 @@ const data=await fetchArticles()
 return data;
 }
 const CartProductsPage= async ()=> {
-const products = await getProducts();
+    const products = await getProducts()
+console.log(products)
 return (
 <>
 <div className="row">
