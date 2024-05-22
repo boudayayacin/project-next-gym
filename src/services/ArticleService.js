@@ -44,3 +44,17 @@ body: JSON.stringify(article),
 const response = await res.json();
 return response;
 }
+export const fetchArticlesPagination=async(page,limit)=> {
+    const res = await
+    fetch(process.env.API_URL+ARTICLE_API+`pagination?page=${page}&limit=${limit}`
+    , { cache: 'no-store' })
+    const response=await res.json()
+    return response;
+    }
+
+    export const fetchArticlesPaginationFilter=async(page,limit,searchTerm,prixMax)=> {
+        const res = await
+        fetch(process.env.API_URL+ARTICLE_API+`paginationFilter?page=${page}&limit=${limit}&searchTerm=${searchTerm}&prixMax=${prixMax}`, { cache: 'no-store' })
+        const response=await res.json()
+        return response;
+        }    
